@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LaurenBackAll : demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+
+	<style>
+		body{
+			margin: 20px 0 0 20px;
+			font-family: 'Actor', sans-serif;
+			color: #fff;
+			background-image: url("../assets/img/lauren.jpg");
+			background-size: cover;
+			overflow: hidden;
+		}
+
+		#ui input{			
+			font-size: 160px;
+			font-family: 'Actor', sans-serif;
+			width: 95%;
+			-webkit-box-sizing : border-box;‌​
+    		-moz-box-sizing : border-box;
+    		box-sizing : border-box;
+    		background-color: transparent;
+    		border: 0;
+    		outline: none;
+    		color: #fff;
+		}
+
+		.node, .predicat, .subject{
+			font-size: 160px;
+		}
+
+		.predicat{
+			color: #E83868 !important;
+		}
+
+		#triples{
+			position: absolute;
+			right: 20px;
+			width: 300px;
+			font-size: 16px;
+			height: 400px;
+			text-transform: uppercase;
+		}
+
+		#triples p{
+			margin: 0 0 8px 0;
+			border-right: 2px solid #E83868;
+			padding-right: 5px;
+			text-align: right;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="triples"></div>
+	<div id="ui"><input type="text" name="input"></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../src/lba.js"></script>
+	<script src="app.js"></script>
+	<script>
+		console.log('GO Lauren '+lba.VERSION+' !');
+
+		$(function(){
+
+			app.start({
+				db: lba
+			});
+		});
+	</script>
+</body>
+</html>
