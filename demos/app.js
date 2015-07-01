@@ -39,7 +39,8 @@
 		        if(step == 3){
 		        	
 		        	$ui.children('div').remove();
-		        	$triples.append('<p>'+triple.join(' ')+'</p>');
+		        	var pred = ' <span style="color:#E83868">'+triple[1]+'</span> ';
+		        	$triples.append('<p>'+triple[0]+pred+triple[2]+'</p>');
 		        	triple = ["","",""];
 		        	step = 0;
 		        }
